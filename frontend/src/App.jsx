@@ -16,17 +16,9 @@ function App() {
   return (
     <Container fluid>
       <h1 className="my-4">Sistema Banco de Sangre - GCL 1.7</h1>
-      
+      <FormTransfusionTest01 />
       <Row>
-        <Col md={4}>
-          <FormTransfusion onTransfusionCreada={handleTransfusionCreada} />
-        </Col>
-        <Col md={4}>
-          <FormTransfusionTest01 />
-        </Col>
-        <Col md={8}>
-          <ListaTransfusiones refresh={refresh} />
-        </Col>
+        <ListaTransfusiones refresh={refresh} />
       </Row>
     </Container>
   );

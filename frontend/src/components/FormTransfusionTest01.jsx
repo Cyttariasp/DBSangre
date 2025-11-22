@@ -109,6 +109,7 @@ function FormTransfusionTest01({ onTransfusionCreada }) {
                       />
                     </div>
 
+                    {/* fecha de txn */}
                     <div className="col-md-2">
                       <label className="form-label">Fecha y Hora *</label>
                       <input
@@ -116,20 +117,6 @@ function FormTransfusionTest01({ onTransfusionCreada }) {
                         className="form-control"
                         name="fecha_transfusion"
                         value={formData.fecha_transfusion}
-                        onChange={handleChange}
-                        required
-                      />
-                    </div>
-
-
-                    {/* Servicio */}
-                    <div className="col-md-2">
-                      <label className="form-label">Servicio *</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        name="servicio"
-                        value={formData.servicio}
                         onChange={handleChange}
                         required
                       />
@@ -234,6 +221,79 @@ function FormTransfusionTest01({ onTransfusionCreada }) {
                       </div>
                     </div>
 
+                    {/* fecha de clasificacion */}
+                    <div className="col-md-2">
+                      <label className="form-label">Fecha de clasificacion</label>
+                      <input
+                        type="datetime-local"
+                        className="form-control"
+                        name="fecha_transfusion"
+                        value={formData.fecha_transfusion}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+
+                    {/* Grupo paciente */}
+                    <div className="col-md-2">
+                      <label className="form-label">Grupo de paciente</label>
+                      <select
+                        className="form-select"
+                        name="grupo de paciente"
+                        required
+                      >
+                        <option value="">Seleccionar Grupo</option>
+                        <option value="4">O+</option>
+                        <option value="8">O(-)</option>
+                        <option value="1">A+</option>
+                        <option value="5">A(-)</option>
+                        <option value="2">B+</option>
+                        <option value="6">B(-)</option>
+                        <option value="3">AB+</option>
+                        <option value="7">AB(-)</option>
+                      </select>
+                    </div>
+
+                    {/* Coombs Directo */}
+                    <div className="col-md-2">
+                      <label className="form-label">Coombs Directo</label>
+                      <select
+                        className="form-select"
+                        name="grupo de paciente"
+                        required
+                      >
+                        <option value="">No aplica</option>
+                        <option value="1">Negativo</option>
+                        <option value="2">Positivo</option>
+                      </select>
+                    </div>
+
+                    {/* Coombs indirecto */}
+                    <div className="col-md-2">
+                      <label className="form-label">Coombs Indirecto</label>
+                      <select
+                        className="form-select"
+                        name="grupo de paciente"
+                        required
+                      >
+                        <option value="">Seleccionar resultado</option>
+                        <option value="1">Negativo</option>
+                        <option value="2">Positivo</option>
+                      </select>
+                    </div>
+
+                    {/* Servicio */}
+                    <div className="col-md-2">
+                      <label className="form-label">Servicio</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="servicio"
+                        value={formData.servicio}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
 
                     {/* Hemocomponente */}
                     <div className="col-md-2">
@@ -253,6 +313,66 @@ function FormTransfusionTest01({ onTransfusionCreada }) {
                         ))}
                       </select>
                     </div>
+
+                    {/* Condicion */}
+                    <div className="col-md-2">
+                      <label className="form-label">Condicion</label>
+                      <select
+                        className="form-select"
+                        name="grupo de paciente"
+                        required
+                      >
+                        <option value="">No aplica</option>
+                        <option value="1">Filtrados</option>
+                        <option value="2">Irradiados</option>
+                        <option value="3">Filtrados e Irradiados</option>
+
+                      </select>
+                    </div>
+
+                    {/* Condicion */}
+                    <div className="col-md-2">
+                      <label className="form-label">Condicion</label>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkDefault" />
+                        <label class="form-check-label" for="checkDefault">
+                          Filtrados
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="checkChecked" />
+                        <label class="form-check-label" for="checkChecked">
+                          Irradiados
+                        </label>
+                      </div>
+                    </div>
+
+                    {/* Matraz */}
+                    <div className="col-md-2">
+                      <label className="form-label">Numero de Matraz</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        name="matraz"
+                        onChange={null}
+                        required
+                      />
+                    </div>
+
+                    {/* Volumen */}
+                    <div className="col-md-2">
+                      <label className="form-label">Volumen</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        name="volumen"
+                        onChange={null}
+                        required
+                      />
+                    </div>
+
+                    
+
 
                   </div>
 
